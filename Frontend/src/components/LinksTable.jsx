@@ -125,7 +125,7 @@ function LinksTable() {
                     <button
                       onClick={() => {
                         navigator.clipboard.writeText(
-                          `http://localhost:5000/api/links/${link.short_code}`,
+                          `${import.meta.env.VITE_API_URL}/api/links/${link.shortCode}`,
                         );
 
                         toast.success("Link copied successfully!");

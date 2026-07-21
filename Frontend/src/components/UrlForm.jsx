@@ -71,7 +71,7 @@ function UrlForm() {
             <button
               onClick={() => {
                 navigator.clipboard.writeText(
-                  `http://localhost:5000/api/links/${result.short_code}`,
+                  `${import.meta.env.VITE_API_URL}/api/links/${result.shortCode}`,
                 );
 
                 alert("Link copied successfully 🚀");
