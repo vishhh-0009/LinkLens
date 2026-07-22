@@ -32,8 +32,10 @@ const createShortLink = (req, res) => {
 
     db.query(query, [long_url, short_code, expiry_date], (err) => {
       if (err) {
+        console.log("INSERT ERROR:", err);
+
         return res.status(500).json({
-          error: "Database Error",
+          error: err.message,
         });
       }
 
